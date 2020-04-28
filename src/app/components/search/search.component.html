@@ -1,0 +1,16 @@
+<form [formGroup]="searchForm" class="ml-1 mr-3">
+  <div class="row d-flex justify-content-center">
+    <div class="col col-md-12 p-lg-0 pr-lg-5">
+      <div class="input-group">
+        <input type="text" class="form-control" formControlName="keyWord" minlength="3" placeholder="Search..."
+          aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2" (click)="onclick()"><i class="fa fa-search"></i> </span>
+      </div>
+
+    </div>
+    <ng-container *ngIf="(keyWord?.errors)">
+      <p class="text-danger" *ngIf="keyWord?.errors?.minlength"><b>must be at least 3 characters long.</b></p>
+    </ng-container>
+    <!-- Search: End -->
+  </div>
+</form>

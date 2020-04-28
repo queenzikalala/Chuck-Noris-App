@@ -1,0 +1,15 @@
+<!-- <ol class="gradient-list">
+  <div *ngFor="let list of jokes">
+    <li>{{list.value}}</li>
+  </div>
+</ol> -->
+
+<div class="container">
+  <h2>Joke list</h2>
+  <div *ngFor="let list of jokes">
+    <div class="card bg-primary text-white" style="height: 200;">
+      <div class="card-body p-4">{{list.value}}</div>
+    </div>
+    <br>
+  </div>
+</div>
